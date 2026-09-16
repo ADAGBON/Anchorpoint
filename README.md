@@ -133,4 +133,3 @@ npx tsc --noEmit     # Type-check without emitting
 | Testing        | Vitest + Testing Library                         |
 | CI             | GitHub Actions (lint → typecheck → test → build) |
 | Target network | Stellar Testnet (Soroban)                        |
-# Anchorpoint
