@@ -120,28 +120,6 @@ npx tsc --noEmit     # Type-check without emitting
 
 ---
 
-## Roadmap / open issues
-
-Remaining backend and contract-ABI work is tracked in the upstream repo's issue
-tracker:
-
-- [Synapse-bridgez/synapse-web — open issues](https://github.com/Synapse-bridgez/synapse-web/issues)
-  _(upstream repo; not yet renamed to RecordxStellar)_
-
-Notable milestones on the path to a working testnet client:
-
-- [x] Replace `alert()` stubs across `AdminTab`, `TxDetailModal`, and `TransactionsTab` with real
-      `TransactionBuilder` + sign + submit calls (`lib/soroban/contract.ts`)
-- [x] Wire `MOCK_TXS` / `MOCK_CONTRACT_INFO` to live `rpc.Server` reads (`useLiveTransactions`,
-      `useLiveContractInfo`), falling back to mock data when no wallet/contract is configured
-- [x] Integrate `@creit.tech/stellar-wallets-kit` (Freighter / xBull) for wallet connection
-      (`lib/wallet/`)
-- [ ] Backend relay service for `register_transaction`, `start_processing`, `complete_transaction`,
-      `fail_transaction`, and `register_callback` webhooks
-- [ ] Fetch `admin` / `relay_signer` from the deployed contract once it exposes a getter for them
-      (currently sourced from `lib/mock-data.ts` / env, since the ABI has none)
-
----
 
 ## Tech stack
 
